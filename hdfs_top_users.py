@@ -5,7 +5,7 @@ import json
 from datetime import datetime
 
 
-namenode_jmx = urllib2.urlopen("http://namenode2-prd3.cnsuning.com:50070/jmx")
+namenode_jmx = urllib2.urlopen("http://namenode2.test.com:50070/jmx")
 text = json.loads(namenode_jmx.read())
 TopUserOpCounts_tmp = text["beans"][21]["TopUserOpCounts"] #unicode
 text2 = json.loads(TopUserOpCounts_tmp)
